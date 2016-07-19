@@ -13,7 +13,7 @@ class Structure extends Component {
 
     return (
       <div>
-        <h1>Structure Yay</h1>
+        <h1>Structure</h1>
         <Link to="/launch">Launch</Link>
         <Link to="/app">App</Link>
         {children ? children : <span>no children</span>}

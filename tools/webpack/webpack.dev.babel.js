@@ -16,12 +16,12 @@ module.exports = require('./webpack.base.babel')({
   ],
   output: {
     filename: 'bundle.js',
-    chunkFilename: '[name].js',
-    sourceMapFilename: '[name].js.map',
+    chunkFilename: '[name].chunk.js',
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
   ],
 });
